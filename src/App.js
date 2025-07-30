@@ -13,7 +13,7 @@ import {
   User,
 } from "lucide-react";
 import "./index.css";
-// import qrImage from "../src/qrcode.jpg"
+import qrImage from "../src/qr-code.jpeg"
 import Image from "../src/profileImage.jpg"
 import { FaWhatsapp } from "react-icons/fa";
 import { SiGoogledrive } from "react-icons/si";
@@ -122,7 +122,7 @@ END:VCARD`;
 
   const generateQRCode = () => {
     const link = document.createElement("a");
-    // link.href = qrImage;
+    link.href = qrImage;
     link.download = contactInfo.name;
     document.body.appendChild(link);
     link.click();
@@ -271,7 +271,7 @@ END:VCARD`;
             <h2 className="section-title-simple">Our Collection</h2>
             <button
               onClick={handleDrive}
-              className="quick-action-btn whatsapp-action"
+              className="quick-action-btn-1 collection-action"
             >
               <div className="action-content">
                 <div className="action-icon drive-icon">
