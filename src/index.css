@@ -1,5 +1,10 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -7,7 +12,830 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.profile-card-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
 }
+
+.profile-card {
+  width: 100%;
+  max-width: 384px;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.profile-header {
+  background: linear-gradient(to bottom right, #1f2937, #111827);
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.profile-image-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.profile-image {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 4px solid rgb(255, 255, 255);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.profile-name {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.25rem;
+}
+
+.profile-title {
+  color: #d1d5db;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.profile-company {
+  color: #ffffff;
+  font-size: 0.75rem;
+}
+
+.social-section {
+  background-color: #111827;
+  padding: 1rem 1.5rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: #1f2937;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.social-icon:hover {
+  background-color: #374151;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.section {
+  margin-bottom: 1.5rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.section-title-simple {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.section-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  color: #6b7280;
+}
+
+.contact-info-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.5rem;
+  background-color: #6b7280;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-info-icon span {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+.about-text {
+  color: #6b7280;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+.company-card {
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.company-header {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.company-name {
+  font-weight: 600;
+  color: #111827;
+  font-size: 1rem;
+}
+
+.company-tital {
+  font-weight: 500;
+  color: #111827;
+  font-size: 10px;
+}
+
+.company-contact-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.company-contact-items {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.company-contact-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.company-contact-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.company-contact-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.company-contact-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.company-contact-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111827;
+  word-break: break-all;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-item {
+  padding: 0.75rem;
+  background-color: #f9fafb;
+  border-radius: 0.5rem;
+}
+
+.contact-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.contact-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contact-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.location-text {
+  line-height: 1.5;
+}
+
+.action-btn {
+  padding: 0.5rem;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.2s;
+  border-radius: 0.25rem;
+}
+
+.action-btn:hover {
+  color: #2563eb;
+}
+
+.quick-action-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  text-align: left;
+}
+
+.whatsapp-action {
+  background-color: #dcfce7;
+}
+
+.whatsapp-action:hover {
+  background-color: #bbf7d0;
+}
+
+.website-action {
+  background-color: #dbeafe;
+}
+
+.website-action:hover {
+  background-color: #bfdbfe;
+}
+
+.action-content {
+  display: flex;
+  align-items: center;
+}
+
+.action-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+}
+
+.whatsapp-icon {
+  background-color: #22c55e;
+  color: white;
+}
+
+.drive-icon {
+  background-color: #039eb3;
+  color: white;
+}
+
+.website-icon {
+  background-color: #1f2937;
+  color: white;
+}
+
+.action-text {
+  text-align: left;
+}
+
+.action-title {
+  font-weight: 500;
+  color: #111827;
+  margin: 0;
+}
+
+.action-subtitle {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.chevron {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #9ca3af;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.primary-btn {
+  width: 100%;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.primary-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.secondary-btn {
+  width: 100%;
+  background-color: #f3f4f6;
+  color: #374151;
+  font-weight: 500;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.secondary-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.footer {
+  background-color: #111827;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.footer-text {
+  color: #9ca3af;
+  font-size: 0.75rem;
+}
+
+.powered-by {
+  color: #6b7280;
+}
+
+.brand-name {
+  color: #fbbf24;
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .profile-card-container {
+    padding: 0.5rem;
+  }
+  
+  .profile-card {
+    max-width: 100%;
+  }
+  
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .section {
+    margin-bottom: 1rem;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  width: 100%;
+  max-width: 1000px;
+  padding: 24px;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 24px;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: #ef4444;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.modal-body-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  overflow-y: auto;
+  max-height: 70vh;
+  padding-right: 4px;
+}
+
+.video-card {
+  border: 1px solid #e5e7eb;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-title {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.video-player {
+  width: 100%;
+  height: 200px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.video-download {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.video-download:hover {
+  text-decoration: underline;
+}
+
+.folder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.folder-card {
+  background-color: #f3f4f6;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: background 0.2s ease;
+}
+
+.folder-card:hover {
+  background-color: #e5e7eb;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-weight: 500;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.app-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.app-content {
+  width: 100%;
+  max-width: 32rem;
+}
+
+.app-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.app-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #1a202c;
+  margin-bottom: 0.5rem;
+}
+
+.app-subtitle {
+  color: #718096;
+}
+
+.app-footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #a0aec0;
+}
+
+/* Profile Card */
+.profile-card {
+  max-width: 28rem;
+  margin: 0 auto;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* Profile Header */
+.profile-header {
+  background-color: #e2e8f0;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.profile-image-container {
+  flex-shrink: 0;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  margin-bottom: 0.25rem;
+}
+
+.profile-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 0.25rem;
+}
+
+.profile-company {
+  font-size: 0.875rem;
+  color: #ffffff;
+}
+
+.social-section {
+  background-color: #1a202c;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 3rem;
+  height: 3rem;
+  background-color: #2d3748;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: white;
+}
+
+.social-icon:hover {
+  background-color: #4a5568;
+  transform: scale(1.1);
+}
+
+.social-icon:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 640px) {
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .profile-image {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .profile-name {
+    font-size: 1.25rem;
+  }
+  
+  .social-icons {
+    gap: 0.75rem;
+  }
+  
+  .social-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.collection-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 16px;
+}
+
+.collection-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.collection-btn-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.collection-icon {
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.collection-text {
+  text-align: left;
+}
+
+.collection-title {
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 0;
+}
+
+.collection-subtitle {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  margin: 0;
+}
+
+.chevron {
+  color: white;
+  opacity: 0.8;
+}
+
+.collection-section {
+  padding: 20px;
+}
+
+.collection-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.whatsapp-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #25D366, #128C7E);
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  max-width: 400px;
+}
+
+.whatsapp-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.whatsapp-button-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.whatsapp-icon-wrapper {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.whatsapp-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.whatsapp-subtitle {
+  font-size: 12px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.whatsapp-chevron {
+  margin-left: 12px;
+  color: white;
+}
+
