@@ -23,7 +23,7 @@ const App = () => {
   const [copiedField, setCopiedField] = useState("");
 
   const contactInfo = {
-    name: "Dharnesh Bhayani",
+    name: "Dharmesh Bhayani",
     title: "Production Manager",
     company: "Neeva Jewels",
     phone: "+91 95868 46507",
@@ -261,24 +261,6 @@ END:VCARD`;
                 <div className="action-text">
                   <p className="action-title">WhatsApp</p>
                   <p className="action-subtitle">Connect on WhatsApp</p>
-                </div>
-              </div>
-              <ChevronRight className="chevron" />
-            </button>
-          </div>
-
-          <div className="section">
-            <h2 className="section-title-simple">Our Collection</h2>
-            <button
-              onClick={handleDrive}
-              className="quick-action-btn-1 collection-action"
-            >
-              <div className="action-content">
-                <div className="action-icon drive-icon">
-                  <SiGoogledrive size={20} color="#ffffffff" />
-                </div>
-                <div className="action-text">
-                  <p className="action-title">See Our Collection</p>
                 </div>
               </div>
               <ChevronRight className="chevron" />
